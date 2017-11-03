@@ -7,7 +7,7 @@ view: event_list {
     distribution_style: all
     sql: SELECT
         event as event_types
-      FROM zola_sales_prod.tracks
+      FROM zola_sales.tracks
       GROUP BY 1
        ;;
   }

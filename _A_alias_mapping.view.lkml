@@ -10,28 +10,28 @@ view: page_aliases_mapping {
         select anonymous_id
         , user_id
         , received_at as received_at
-        from zola_sales_prod.tracks
+        from zola_sales.tracks
 
         union
 
         select user_id
           , null
           , received_at
-        from zola_sales_prod.tracks
+        from zola_sales.tracks
 
         union
 
         select anonymous_id
           , user_id
           , received_at
-        from zola_sales_prod.pages
+        from zola_sales.pages
 
         union
 
         select user_id
         , null
         , received_at
-        from zola_sales_prod.pages
+        from zola_sales.pages
       )
 
       select

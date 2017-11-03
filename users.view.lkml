@@ -1,5 +1,5 @@
 view: users {
-  sql_table_name: zola_sales_prod.users ;;
+  sql_table_name: zola_sales.users ;;
 
   dimension: id {
     primary_key: yes

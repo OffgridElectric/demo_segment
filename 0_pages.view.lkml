@@ -1,5 +1,5 @@
 view: pages {
-  sql_table_name: zola_sales_prod.pages ;;
+  sql_table_name: zola_sales.pages ;;
 
   dimension: id {
     primary_key: yes

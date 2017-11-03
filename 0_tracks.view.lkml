@@ -58,6 +58,11 @@ view: tracks {
        ;;
   }
 
+  dimension: context_app_version {
+    type: string
+    sql: ${TABLE}.context_app_version ;;
+  }
+
   measure: count_percent_of_total {
     type: percent_of_total
     sql: ${count} ;;

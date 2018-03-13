@@ -2,9 +2,6 @@
 
 view: mapped_tracks {
   derived_table: {
-    sortkeys: ["event_id"]
-    distribution: "looker_visitor_id"
-    sql_trigger_value: select current_date ;;
     sql: select *
         , datediff(minutes, lag(received_at) over(partition by looker_visitor_id order by received_at), received_at) as idle_time_minutes
         from (

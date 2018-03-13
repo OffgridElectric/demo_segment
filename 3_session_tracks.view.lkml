@@ -3,9 +3,6 @@
 
 view: sessions_trk {
   derived_table: {
-    sql_trigger_value: select count(*) from ${mapped_tracks.SQL_TABLE_NAME} ;;
-    sortkeys: ["session_id"]
-    distribution: "looker_visitor_id"
     sql: select row_number() over(partition by looker_visitor_id order by received_at) || ' - ' || looker_visitor_id as session_id
       , looker_visitor_id
       , received_at as session_start_at

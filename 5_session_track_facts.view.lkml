@@ -2,9 +2,6 @@
 
 view: session_trk_facts {
   derived_table: {
-    sql_trigger_value: select count(*) from ${track_facts.SQL_TABLE_NAME} ;;
-    sortkeys: ["session_id"]
-    distribution: "session_id"
     sql: SELECT s.session_id
         , MAX(map.received_at) AS ended_at
         , count(distinct map.event_id) AS num_pvs

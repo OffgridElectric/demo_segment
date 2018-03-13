@@ -1,9 +1,5 @@
 view: event_facts {
   derived_table: {
-    # Rebuilds after sessions rebuilds
-    sql_trigger_value: select count(*) from ${sessions_pg_trk.SQL_TABLE_NAME} ;;
-    sortkeys: ["event_id"]
-    distribution: "event_id"
     sql: select t.received_at
         , t.anonymous_id
         , t.event_id

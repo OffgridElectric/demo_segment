@@ -1,8 +1,5 @@
 view: user_session_facts {
   derived_table: {
-    sql_trigger_value: SELECT CURRENT_DATE ;;
-    distribution: "looker_visitor_id"
-    sortkeys: ["looker_visitor_id"]
     sql: SELECT
         looker_visitor_id
         , MIN(DATE(s.session_start_at)) as first_date

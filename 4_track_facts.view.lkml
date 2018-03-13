@@ -2,9 +2,6 @@
 
 view: track_facts {
   derived_table: {
-    sql_trigger_value: select count(*) from ${sessions_trk.SQL_TABLE_NAME} ;;
-    sortkeys: ["event_id"]
-    distribution: "looker_visitor_id"
     sql: select t.anonymous_id
           , t.received_at
           , t.event_id

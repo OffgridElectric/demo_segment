@@ -1,8 +1,5 @@
 view: page_aliases_mapping {
   derived_table: {
-    sql_trigger_value: select current_date ;;
-    sortkeys: ["looker_visitor_id", "alias"]
-    distribution: "alias"
     sql: with
 
       -- Establish all child-to-parent edges from tables (tracks, pages, aliases)
